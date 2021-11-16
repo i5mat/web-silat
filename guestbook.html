@@ -1,0 +1,118 @@
+<!-- 
+WAN MUHAMMAD ISMAT BIN WAN AZMY
+B031920032
+SILAT CEKAK WEBPAGE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Silat Cekak Online</title>
+  </head>
+  <body id="bodyPage">
+      <header>
+        <a href="http://silatcekak.org.my">
+          <img src="src/image/banner.png" style="height: auto;" id="imgHeader"/>
+        </a>
+      </header>
+
+      <div class="flex-container">
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="intro.html">INTRODUCTION</a></li>
+            <li><a href="missionvission.html">MISSION&VISSION</a></li>
+            <li><a href="guestbook.html">GUESTBOOK</a></li>
+            <li><a href="flex.html">FLEX</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+          </ul>
+        </nav>
+  
+        <section>
+          <div id="main">
+            <h3>GUESTBOOK</h3>
+    
+            <form method="POST" id="form">
+                    <table border="1">
+                        <tr>
+                            <td colspan="2">
+                              <select id="colorSelection">
+                                <option value="#FA8072">Default</option>
+                                <option value="#ffffff">White</option>
+                                <option value="#ff0000">Red</option>
+                                <option value="#0000ff">Blue</option>
+                                <option value="#00ff00">Lime</option>
+                                <option value="#ffff00">Yellow</option>
+                              </select>
+    
+                              <select id="pageSelection">
+                                <option selected>SELECT</option>
+                                <option value="index.html">HOME</option>
+                                <option value="intro.html">INTRODUCTION</option>
+                                <option value="missionvission.html">MISI & VISI</option>
+                                <option value="guestbook.html">BUKU TAMU</option>
+                              </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>First Name:</th>
+                            <td><input type="text" id="firstName"/></td>
+                        </tr>
+                        <tr>
+                          <th>Last Name:</th>
+                          <td><input type="text" id="lastName"/></td>
+                      </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td><input type="text" id="email"/></td>
+                        </tr>
+                        <tr>
+                            <th>Address:</th>
+                            <td><textarea rows="4" id="address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Gender:</th>
+                            <td>
+                                <input type="radio" id="fem" name="gender" value="Female">Female</input>
+                                <input type="radio" id="mal" name="gender" value="Male">Male</input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Comment:</th>
+                            <td><textarea rows="4" id="comment"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>Favorite Site</th>
+                            <td>
+                              <input type="checkbox" id="google" value="Google"/>
+                              <label for="google">Google Page</label>
+                              <input type="checkbox" id="fb" value="Facebook"/>
+                              <label for="fb">Facebook Page</label>
+                              <input type="checkbox" id="utem" value="UTeM"/>
+                              <label for="utem">UTeM Page</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                              <button type="submit" id="postData">PROCESS FORM</button>
+                              <button type="button" id="resetButton">CLEAR</button>
+                            </td>
+                        </tr>
+                    </table>
+            </form>
+            <div id="submitted">
+    
+            </div>
+          </div>
+        </section>
+      </div>
+    
+    <footer style="text-align: center">
+      <b>Copyright &copy; B031920032@student.utem.edu.my</b>
+    </footer>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

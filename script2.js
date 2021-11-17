@@ -25,7 +25,7 @@ function PostDistance() {
         var c = document.getElementById("chris").checked;
         var e = document.getElementById("elliot").checked;
 
-        var totalSlope = (y2 - y1) / (x2 - x1);
+        var totalSlope = Math.sqrt( Math.pow((x1-x2), 2) + Math.pow((y1- y2), 2) );
         var totalSum = x1 + x2 + y1 + y2;
         var totalAvg = totalSum / 4;
         var totalProduct = x1 * x2 * y1 * y2;

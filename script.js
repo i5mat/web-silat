@@ -40,19 +40,19 @@ function PostData() {
 
 
         var write = `
-        <table class="noBorder" style="width: 50%;">
-            <tr class="noBorder">
-            <td class="noBorder">
-                <p><b>Date:</b> ${date}</p>
-                <p><b>Name:</b> ${a}</p>
-                <p><b>Last Name:</b> ${aa}</p>
-                <p><b>Email:</b> ${b}</p>
-                <p><b>Address:</b> ${c}</p>
-                <p><b>Gender:</b> ${gender}</p>
-                <p><b>Comment:</b> ${f}</p>
-                <p><b>Favorite Site:</b> ${websites}</p>
+        <table style="width: 50%;">
+            <tr>
+                <td>
+                    <p><b>Date:</b> ${date}</p>
+                    <p><b>Name:</b> ${a}</p>
+                    <p><b>Last Name:</b> ${aa}</p>
+                    <p><b>Email:</b> ${b}</p>
+                    <p><b>Address:</b> ${c}</p>
+                    <p><b>Gender:</b> ${gender}</p>
+                    <p><b>Comment:</b> ${f}</p>
+                    <p><b>Favorite Site:</b> ${websites}</p>
+                </td>
             </tr>
-            </td>
         </table>
         `;
 

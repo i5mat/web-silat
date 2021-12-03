@@ -5,7 +5,6 @@ SILAT CEKAK WEBPAGE
 */
 
 document.getElementById("colorSelection").addEventListener("change", ChangeBackgroundColor);
-document.getElementById("pageSelection").addEventListener("change", ChangePage);
 document.getElementById("resetButton").addEventListener("click", resetForm);
 document.getElementById("postData").addEventListener("click", PostData);
 var today = new Date();
@@ -19,41 +18,33 @@ function PostData() {
         var a = document.getElementById("firstName").value;
         var aa = document.getElementById("lastName").value;
         var b = document.getElementById("email").value;
+        var bb = document.getElementById("phone").value;
         var c = document.getElementById("address").value;
-        var d = document.getElementById("fem").checked;
-        var e = document.getElementById("mal").checked;
-        var f = document.getElementById("comment").value;
-        var g = document.getElementById("google").checked;
-        var h = document.getElementById("fb").checked;
-        var i = document.getElementById("utem").checked;
+        var cc = document.getElementById("tshirtSelection").value;
+        var d = document.getElementById("sizeS").checked;
+        var e = document.getElementById("sizeM").checked;
+        var ee = document.getElementById("sizeL").checked;
+        var f = document.getElementById("qty").value;
 
-        var gender = "Not Defined by User";
+        var size = "Not Defined by User";
 
-        if (d) gender = "Female";
-        else if (e) gender = "Male";
+        if (d) size = "Size S";
+        else if (e) size = "Size M";
+        else if (ee) size = "Size L";
 
-        var websites = "";
-
-        if (g) websites += "https://www.google.com | ";
-        if (h) websites += "https://www.facebook.com | ";
-        if (i) websites += "https://www.utem.edu.my  ";
-
+        var cal = cc * f;
 
         var write = `
-        <table style="width: 50%;">
-            <tr>
-                <td>
-                    <p><b>Date:</b> ${date}</p>
-                    <p><b>Name:</b> ${a}</p>
-                    <p><b>Last Name:</b> ${aa}</p>
-                    <p><b>Email:</b> ${b}</p>
-                    <p><b>Address:</b> ${c}</p>
-                    <p><b>Gender:</b> ${gender}</p>
-                    <p><b>Comment:</b> ${f}</p>
-                    <p><b>Favorite Site:</b> ${websites}</p>
-                </td>
-            </tr>
-        </table>
+        <h3>Thank You for ordering T-Shirt with our company! ✅</h3>
+            <p><b>Date:</b> ${date}</p>
+            <p><b>Customer Name:</b> ${a} ${aa}</p>
+            <p><b>Customer Email:</b> ${b}</p>
+            <p><b>Customer Phone:</b> ${bb}</p>
+            <p><b>Customer Address:</b> ${c}</p>
+            <p><b>Selected Size:</b> ${size}</p>
+            <p><b>Selected T-Shirt Type:</b> ${cc}</p>
+            <p><b>T-Shirt Qty:</b> ${f}</p>
+            <p><b>Total Price (RM):</b> ${cal}</p>
         `;
 
         document.getElementById("submitted").innerHTML = write;
@@ -70,11 +61,5 @@ function ChangeBackgroundColor(){
 }
 
 function resetForm() {
-    alert("Your form will be reset!");
-    document.getElementById("firstName").value = "";
-    document.getElementById("lastName").value = "";
-    document.getElementById("address").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("comment").value = "";
-    alert("Form is done reset!");
+    document.getElementById("form").reset();
 }

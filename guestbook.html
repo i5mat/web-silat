@@ -13,21 +13,27 @@ SILAT CEKAK WEBPAGE
   </head>
   <body id="bodyPage">
       <header>
-        <a href="http://silatcekak.org.my">
-          <img src="src/image/banner.png" style="height: auto;" id="imgHeader"/>
-        </a>
+        <h1>Sport Store</h1>
+        <select id="colorSelection">
+          <option value="#FA8072">Default</option>
+          <option value="#ffffff">White</option>
+          <option value="#ff0000">Red</option>
+          <option value="#0000ff">Blue</option>
+          <option value="#00ff00">Lime</option>
+          <option value="#ffff00">Yellow</option>
+        </select>
       </header>
 
       <div class="flex-container">
         <nav>
           <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="intro.html">INTRODUCTION</a></li>
-            <li><a href="missionvission.html">MISSION&VISSION</a></li>
-            <li><a href="guestbook.html">GUESTBOOK</a></li>
-            <li><a href="flex.html">FLEX</a></li>
-            <li><a href="media.html">MEDIA</a></li>
-            <li><a href="distance.html">CAL DISTANCE</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">OUR PRODCUT</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li>
+              <img src="src/image/tshirt.png" alt="tshirt" width="200px" height="200px">
+            </li>
           </ul>
         </nav>
   
@@ -38,64 +44,45 @@ SILAT CEKAK WEBPAGE
             <form method="POST" id="form">
                     <table border="1">
                         <tr>
-                            <td colspan="2">
-                              <select id="colorSelection">
-                                <option value="#FA8072">Default</option>
-                                <option value="#ffffff">White</option>
-                                <option value="#ff0000">Red</option>
-                                <option value="#0000ff">Blue</option>
-                                <option value="#00ff00">Lime</option>
-                                <option value="#ffff00">Yellow</option>
-                              </select>
-    
-                              <select id="pageSelection">
-                                <option selected>SELECT</option>
-                                <option value="index.html">HOME</option>
-                                <option value="intro.html">INTRODUCTION</option>
-                                <option value="missionvission.html">MISI & VISI</option>
-                                <option value="guestbook.html">BUKU TAMU</option>
-                                <option value="flex.html">FLEX</option>
-                                <option value="media.html">MEDIA</option>
-                              </select>
-                            </td>
-                        </tr>
-                        <tr>
                             <th>First Name:</th>
                             <td><input type="text" id="firstName"/></td>
                         </tr>
                         <tr>
                           <th>Last Name:</th>
                           <td><input type="text" id="lastName"/></td>
-                      </tr>
+                        </tr>
                         <tr>
-                            <th>Email:</th>
-                            <td><input type="text" id="email"/></td>
+                          <th>Email:</th>
+                          <td><input type="text" id="email"/></td>
+                        </tr>
+                        <tr>
+                          <th>Phone:</th>
+                          <td><input type="text" id="phone"/></td>
                         </tr>
                         <tr>
                             <th>Address:</th>
                             <td><textarea rows="4" id="address"></textarea></td>
                         </tr>
                         <tr>
-                            <th>Gender:</th>
-                            <td>
-                                <input type="radio" id="fem" name="gender" value="Female">Female</input>
-                                <input type="radio" id="mal" name="gender" value="Male">Male</input>
-                            </td>
+                          <th>T-Shirt Type:</th>
+                          <td>
+                            <select id="tshirtSelection">
+                              <option selected>SELECT</option>
+                              <option value="11.50">Short Sleeves - RM 11.50</option>
+                            </select>
+                          </td>
                         </tr>
                         <tr>
-                            <th>Comment:</th>
-                            <td><textarea rows="4" id="comment"></textarea></td>
+                          <th>T-Shirt Size</th>
+                          <td>
+                              <input type="radio" id="sizeS" name="size" value="Female">S</input>
+                              <input type="radio" id="sizeM" name="size" value="Male">M</input>
+                              <input type="radio" id="sizeL" name="size" value="Male">L</input>
+                          </td>
                         </tr>
                         <tr>
-                            <th>Favorite Site</th>
-                            <td>
-                              <input type="checkbox" id="google" value="Google"/>
-                              <label for="google">Google Page</label>
-                              <input type="checkbox" id="fb" value="Facebook"/>
-                              <label for="fb">Facebook Page</label>
-                              <input type="checkbox" id="utem" value="UTeM"/>
-                              <label for="utem">UTeM Page</label>
-                            </td>
+                          <th>Quantity:</th>
+                          <td><input type="number" id="qty"/></td>
                         </tr>
                         <tr>
                             <td colspan="2">

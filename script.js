@@ -32,24 +32,33 @@ function PostData() {
         else if (e) size = "Size M";
         else if (ee) size = "Size L";
 
-        var cal = cc * f;
+        if (a == "" || aa == "" || b == "" || c == "" || cc == "") {
+            myFunction();
+        } else {
 
-        var write = `
-        <h3>Thank You for ordering T-Shirt with our company! ✅</h3>
-            <p><b>Date:</b> ${date}</p>
-            <p><b>Customer Name:</b> ${a} ${aa}</p>
-            <p><b>Customer Email:</b> ${b}</p>
-            <p><b>Customer Phone:</b> ${bb}</p>
-            <p><b>Customer Address:</b> ${c}</p>
-            <p><b>Selected Size:</b> ${size}</p>
-            <p><b>Selected T-Shirt Type:</b> ${cc}</p>
-            <p><b>T-Shirt Qty:</b> ${f}</p>
-            <p><b>Total Price (RM):</b> ${cal}</p>
-        `;
+            var cal = cc * f;
 
-        document.getElementById("submitted").innerHTML = write;
+            var write = `
+                <h3>Thank You for ordering T-Shirt with our company! ✅</h3>
+                <p><b>Date:</b> ${date}</p>
+                <p><b>Customer Name:</b> ${a} ${aa}</p>
+                <p><b>Customer Email:</b> ${b}</p>
+                <p><b>Customer Phone:</b> ${bb}</p>
+                <p><b>Customer Address:</b> ${c}</p>
+                <p><b>Selected Size:</b> ${size}</p>
+                <p><b>Selected T-Shirt Type:</b> ${cc}</p>
+                <p><b>T-Shirt Qty:</b> ${f}</p>
+                <p><b>Total Price (RM):</b> ${cal}</p>
+            `;
+
+            document.getElementById("submitted").innerHTML = write;
+        }
 
     }
+}
+
+function myFunction(){
+    alert("You have not filled out the form completely. Please try again");
 }
 
 function ChangePage(){

@@ -32,14 +32,15 @@ SILAT CEKAK WEBPAGE
             <li><a href="#">OUR PRODCUT</a></li>
             <li><a href="#">ABOUT US</a></li>
             <li>
-              <img src="src/image/tshirt.png" alt="tshirt" width="200px" height="200px">
+              <img src="src/image/tshirt.png" alt="tshirt" width="180px" height="200px">
             </li>
           </ul>
         </nav>
   
         <section>
           <div id="main">
-            <h3>GUESTBOOK</h3>
+            <h3>Registration Form</h3>
+            <h3>Please Fill in The Form</h3>
     
             <form method="POST" id="form">
                     <table border="1">
@@ -57,7 +58,7 @@ SILAT CEKAK WEBPAGE
                         </tr>
                         <tr>
                           <th>Phone:</th>
-                          <td><input type="text" id="phone"/></td>
+                          <td><input type="text" id="phone" onkeypress="return onlyNumberKey(event)" /></td>
                         </tr>
                         <tr>
                             <th>Address:</th>
@@ -105,4 +106,12 @@ SILAT CEKAK WEBPAGE
 
     <script src="script.js" type="text/javascript"></script>
   </body>
+  <script>
+    function onlyNumberKey(evt) {
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+  </script>
 </html>
